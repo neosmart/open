@@ -30,7 +30,7 @@ int main(int argc, T argv)
 
 	if (argc == 1)
 	{
-		ExitProcess(-1);
+		return -1;
 	}
 
 	SHELLEXECUTEINFO sexi{};
@@ -42,11 +42,7 @@ int main(int argc, T argv)
 	
 	if (ShellExecuteEx(&sexi))
 	{
-		ExitProcess(0);
+		return 0;
 	}
-	else
-	{
-		auto exitCode = GetLastError();
-		ExitProcess(GetLastError());
-	}
+	return GetLastError();
 }
