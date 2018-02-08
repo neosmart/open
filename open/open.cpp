@@ -39,7 +39,7 @@ int main(int argc, T argv)
 	//sexi.lpVerb = _T("open"); //does not trigger an "Open With" dialog
 	sexi.lpVerb = nullptr; //this will trigger an "Open With" dialog for unknown file types
 	sexi.nShow = SW_NORMAL; //because we are running hidden, this is required
-	
+
 	if (ShellExecuteEx(&sexi))
 	{
 		return 0;
