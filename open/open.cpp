@@ -33,6 +33,13 @@ int main(int argc, T argv)
 		return -1;
 	}
 
+    //For WSL support, replace backslashes with forward slashes
+    auto ptr = argv[1];
+    while (ptr = wcschr(ptr, L'/'))
+    {
+        *ptr = '\\';
+    }
+
 	SHELLEXECUTEINFO sexi{};
 	sexi.cbSize = sizeof(sexi);
 	sexi.lpFile = argv[1];
