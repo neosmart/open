@@ -10,7 +10,7 @@ At its heart, `open` is a convenient way to tell Windows to launch a file or ope
 
 Just copy `open.exe` to a directory in your `PATH` and call it from the command line (under WSL/bash or from cmd):
 
-```
+```bash
 open mydoc.docx # launches Microsoft Word to edit the file
 open . # launches Windows explorer, open to this direcctory
 open foo.exe # runs foo.exe
